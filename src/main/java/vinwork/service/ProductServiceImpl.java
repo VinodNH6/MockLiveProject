@@ -27,8 +27,8 @@ public class ProductServiceImpl implements ProductService{
 	}
 
 	@Override
-	public boolean remove(Product product) {
-		return prodDao.remove(product);
+	public boolean remove(int pid) {
+		return prodDao.remove(pid);
 	}
 
 	@Override

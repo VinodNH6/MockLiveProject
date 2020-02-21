@@ -40,10 +40,11 @@ public class ProductDAOImpl implements ProductDAO {
 		return updatedone;
 	}
 
-	public boolean remove(Product product) {
-		Optional<Product> productx =  db.findProductById(product.getPid());
-		if(productx.isPresent()) {
-			return db.delete(product);
+	public boolean remove(int pid) {
+//		Optional<Product> productx =  db.findProductById(product.getPid());
+		Optional<Product> product =  db.findProductById(pid);
+		if(product.isPresent()) {
+			return db.delete(product.get());
 		} else {
 			return false;	
 		}
