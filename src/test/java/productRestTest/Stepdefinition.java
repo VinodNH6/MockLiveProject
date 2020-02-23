@@ -38,6 +38,7 @@ public class Stepdefinition {
     @Then("^the server should handle it and return a success status$")
     public void theServerShouldReturnASuccessStatus() {
     	System.out.println("THREE");
+    	Assert.assertEquals(100, 300);
     }
 
     @Then("^the requested data is returned$")
